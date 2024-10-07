@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Gems - One Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <!-- Bootstrap CSS for carousel -->
+
+    <!-- Embedded CSS -->
+    <style>
+        /* General Styling for Body */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            font-family: Arial, sans-serif;
+            color: #87CEFA;
+            background: linear-gradient(270deg, #000000, #87CEFA);
+            background-size: 200% 200%;
+            animation: gradientAnimation 15s ease infinite;
+            box-sizing: border-box;
+        }
+
+        /* Keyframe Animation for Background */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px;
+            text-align: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Set images to scale responsively */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Animated Heading Styling */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .animated-heading {
+            font-family: Lusitana;
+            font-size: 5em;
+            color: white;
+            animation: textWave 2s ease-in-out infinite;
+        }
+
+        .animated-subheading {
+            font-size: 1.5em;
+            color: #87CEFA;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        @keyframes textWave {
+            0% { transform: translateX(10px); }
+            50% { transform: translateX(-10px); }
+            100% { transform: translateX(10px); }
+        }
+
+        /* Contact Us Section Styling */
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.1em;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #87CEFA;
+            color: black;
+            cursor: pointer;
+            border-radius: 30px;
+            border: none;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #000000;
+            color: #87CEFA;
+        }
+
+        /* Gallery Section */
+        .album-header {
+            margin-bottom: 20px;
+            font-size: 4rem;
+        }
+
+        .album-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .album-item {
+            margin: 10px;
+            border: 2px solid white;
+            width: 300px;
+        }
+
+        /* Modern Button Styling */
+        .pagination {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .pagination button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #87CEFA;
+            border: none;
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            background-color: black;
+            color: #87CEFA;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+            }
+            .album-item {
+                width: 100%;
+            }
+        }
+
+        .carousel-inner {
+            border-radius: 20%;
+            width: 50%;
+            margin: auto;
+        }
+      
+        
+
+        .facebook-follow {
+            width: 50%;
+            margin: auto;
+            padding-top: 80px;
+        }
+
+        #gallery {
+            color: white;
+            font-size:2.5rem;
+        }
+             
+        .about { 
+            color: white;
+            text-align: center;
+        }
+
+        /* Responsive adjustments for desktop */
+        @media (min-width: 1024px) {
+            .album-item {
+                flex: 1 1 200px;
+                max-width: 200px;
+            }
+
+            .carousel-inner {
+                border-radius: 20%;
+            margin: auto;
+                width: 40%;
+            }
+
+            section {
+                max-width: 1400px;
+            }
+            .album-header {
+            margin-bottom: 20px;
+            font-size: 6rem;
+        }
+    .animated-heading{
+        font-size: 8rem;
+    }
+
+    }
+     
+        
+    </style>
+</head>
+<body>
+
+    <!-- Section 1: Animated Background with Carousel and Wavy Text -->
+    <section id="home">
+        <div class="header">
+            <h1 class="animated-heading">Divine Gems</h1>
+            <p class="animated-subheading">The Finishing Touch 💎</p>
+
+        </div>
+
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+            <div class="carousel-inner">
+                <div class="carousel-item active" loading="lazy">
+                    <img src="j5.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" loading="lazy">
+                    <img src="j13.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" loading="lazy">
+                    <img src="j44.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" loading="lazy">
+                    <img src="j42.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <div class="about">
+       <strong> <h3>We Specialise In Sterling Silver 925 & Semi-precious Stone Jewellery</strong></h3>
+    </div>
+
+    <!-- Section 2: Contact Us Section -->
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>Feel free to reach out using the form below or via Facebook.</p>
+
+        <!-- Contact Form with Formspree Integration -->
+        <form action="https://formspree.io/f/xblrngoa" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="off">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="off">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required autocomplete="off"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Facebook Follow Section -->
+        <div class="facebook-follow">
+            <a href="https://www.facebook.com/people/Divine-Gems/100089148492723/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="facebook-logo">
+            </a>
+            <span>Follow us on Facebook</span>
+        </div>
+    </section>
+
+    <!-- Section 3: Gallery Section -->
+    <section id="gallery">
+        <div class="album-header">
+           <strong> Gallery</strong>
+        </div>
+        <div class="p-heading">
+        <p>Please note, limited availability for items. Gallery for display purposes only. Don't hesitate to contact for any request. Thank you!</p>
+    </div>
+        <div class="album-container">
+            <div class="album-item">
+                <img src="j59.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j58.jpg" alt="Photo 2" 
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j56.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j53.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j54.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j55.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            
+            </div>
+            <div class="album-item">
+                <img src="j50.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j51.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j44.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j45.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j58.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j41.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j42.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j43.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j36.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j37.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j39.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j33.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j34.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j35.jpg" alt="Photo 2"
+                loading="lazy">
+                
+            </div>
+            <div class="album-item">
+                <img src="j30.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j31.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j32.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j26.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j27.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j28.jpg" alt="Photo 2"
+                >
+            </div>
+            <div class="album-item">
+                <img src="j21.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j22.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j23.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j17.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j19.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j20.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j14.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j15.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j16.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j11.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j12.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j13.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j2.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j3.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j6.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+            <div class="album-item">
+                <img src="j1.jpg" alt="Photo 2"
+                loading="lazy">
+            </div>
+
+            <!-- Footer -->
+<footer>
+    <p style="color: #87CEFA; font-family: Lusitana; text-align: center; padding: 20px; background-color: black;">
+        Copyright © Divine Gems 💎 | All Rights Reserved 2024
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
